@@ -1,0 +1,21 @@
+input {
+    margin: 2px 0; 
+}
+.thongTin {
+    margin-bottom: 5px;
+}
+.thongTin li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 82%;
+}
+#name {
+    margin-top: 0;
+}
+td {
+    text-align: center;
+}
+td:first-child {
+    text-align: left;
+}
