@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass -o css/ css/"
+    "scss": "node-sass -o css/ css/",
+    "start": "npm run watch:all",
+    "watch:scss": "onchange \"css/*.scss\" -- npm run scss",
+    "watch:all": "parallelshell \"npm run watch:scss\" \"npm run lite\"",
+    "lite": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -19,7 +23,9 @@
   "homepage": "https://github.com/khiemtongthong/test-1#readme",
   "devDependencies": {
     "lite-server": "^2.6.1",
-    "node-sass": "^9.0.0"
+    "node-sass": "^9.0.0",
+    "onchange": "^3.3.0",
+    "parallelshell": "^3.0.2"
   },
   "dependencies": {
     "bootstrap": "^4.0.0",
